@@ -14,7 +14,6 @@ function App(entry) {
       .then(response => {
         console.log(response.data);
         setCard(response.data.message);
-        console.log(setCard());
       })
       .catch(err =>
         console.log("The NASA API is currently down; please try again later.")
@@ -25,7 +24,8 @@ function App(entry) {
     <div className="App">
       <h1>NASA PHOTO OF THE DAY</h1>
       <p className="intro">For your viewing pleasure, today's photo:</p>
-      <Photos className="photos" />
+      <div>{card}</div>
+      <Photos className="photos" data={card} />
     </div>
   );
 }
