@@ -1,11 +1,11 @@
 import React from "react";
 
-function Photos(props) {
+function Photos({vidUrl}, {explanation}) {
   return (
     <div className="card">
       <h3 className="cardTitle">Title</h3>
-      <img className="cardImage" src={props.url} alt="" />
-      <p className="explanation">{props.explanation}</p>
+      <iframe src={vidUrl}  />
+      <p className="explanation">{explanation}</p>
     </div>
   );
 }
