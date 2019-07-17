@@ -1,9 +1,10 @@
 import React, { useState, useEffect } from "react";
 import "./App.scss";
 import axios from "axios";
+import Photos from "./Photos";
 
-function App() {
-  const [photo, setPhoto] = useState("");
+function App(entry) {
+  const [card, setCard] = useState("");
 
   useEffect(() => {
     axios
@@ -12,7 +13,8 @@ function App() {
       )
       .then(response => {
         console.log(response.data);
-        setPhoto(response.data.message);
+        setCard(response.data.message);
+        console.log(setCard());
       })
       .catch(err =>
         console.log("The NASA API is currently down; please try again later.")
@@ -21,10 +23,9 @@ function App() {
 
   return (
     <div className="App">
-      <h1>Nasa Photo of The Day</h1>
-      <p>Here are my beautiful photos:</p>
-      <div className="image">{photo}</div>
-      <h3 className="title">{}</h3>
+      <h1>NASA PHOTO OF THE DAY</h1>
+      <p className="intro">For your viewing pleasure, today's photo:</p>
+      <Photos className="photos" />
     </div>
   );
 }
