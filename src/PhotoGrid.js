@@ -1,11 +1,10 @@
-import React,  { useState, useEffect } from 'react';
-import axios from 'axios';
+import React, { useState, useEffect } from "react";
+import axios from "axios";
 import Photos from "./Photos";
 
-export default function PhotoGrid( {limit}) {
-  const [card, setCard] = useState([]);
-  const [type, setType] = useState("video")
-console.log("card:", card)
+export default function PhotoGrid(props) {
+  const [card, setCard] = useState("");
+  // const [type, setType] = useState("video")
 
   useEffect(() => {
     axios
@@ -20,16 +19,17 @@ console.log("card:", card)
       .catch(err =>
         console.log("The NASA API is currently down; please try again later.")
       );
-  }, [type]);
-
-console.log("type", type)
+  }, []);
 
   return (
     <div className="photo-grid">
-    <button onClick={() => setType("video")}>Video</button>
-    <Photos vidUrl={card.url} explanation={card.explanation}/>
+      <Photos
+        mediaUrl={card.hdurl}
+        explanation={card.explanation}
+        mediaTitle={card.title}
+        mediaType={card.media_type}
+        date={card.date}
+      />
     </div>
-
-
-  )
+  );
 }
