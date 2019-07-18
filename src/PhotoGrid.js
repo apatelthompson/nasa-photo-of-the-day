@@ -4,7 +4,6 @@ import Photos from "./Photos";
 
 export default function PhotoGrid(props) {
   const [card, setCard] = useState("");
-  // const [type, setType] = useState("video")
 
   useEffect(() => {
     axios
