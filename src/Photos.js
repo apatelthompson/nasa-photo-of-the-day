@@ -1,10 +1,10 @@
 import React from "react";
-import { Header, Container, Card, Image } from "semantic-ui-react";
+import { Header, Card, Image } from "semantic-ui-react";
 
 const Photos = props => (
-  <Container>
+  <div>
     {props.mediaType === "image" ? (
-      <Card className="bigCard" style={{ width: "700px", height: "800px" }}>
+      <Card className="bigCard" style={{ width: "700px", height: "850px" }}>
         <div className="card">
           <Header as="h2" className="cardTitle">
             {props.mediaTitle}
@@ -35,7 +35,7 @@ const Photos = props => (
         </div>
       </Card>
     )}
-  </Container>
+  </div>
 );
 
 export default Photos;

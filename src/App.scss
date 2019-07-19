@@ -1,12 +1,14 @@
-.App {
+.ui.container.App {
   text-align: center;
   display: flex;
   flex-direction: column;
   align-items: center;
+  justify-content: center;
   margin: 40px 0;
 
   .ui.header.main {
     font-family: Lato;
+    font-size: 3rem;
     color: rgb(14, 43, 53);
     padding: 20px 0 0 0;
   }
@@ -16,17 +18,22 @@
     font-family: Lato;
     font-size: 1.3rem;
     color: rgb(14, 43, 53);
-  }
 
-  .datePicker {
-    margin: 20px 0;
+    padding-bottom: 30px;
+  }
+  .main-section {
+    border-top: 2px solid rgb(14, 43, 53);
+    padding-top: 40px;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
   }
 
   .card {
-    // background-color: white;
     width: 700px;
-    height: 800px;
-    // margin: 20px 0 0 40px;
+    height: 850px;
+    margin: 0 20px;
     display: flex;
     flex-direction: column;
     justify-content: center;
@@ -62,13 +69,17 @@
 
     .explanation {
       font-family: Lato;
-      font-size: 1rem;
+      font-size: 1.2rem;
       width: 600px;
       text-align: justify;
       color: charcoal;
       margin: 40px 0;
       color: white;
-      line-height: 1.4rem;
+      line-height: 1.8rem;
     }
+  }
+
+  .ui.header {
+    color: white;
   }
 }
