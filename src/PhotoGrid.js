@@ -8,7 +8,7 @@ export default function PhotoGrid(props) {
   useEffect(() => {
     axios
       .get(
-        "https://api.nasa.gov/planetary/apod?api_key=2JAcjwEBaCKS4enUmD0hveRXamLQCVauioOBJ6V2"
+        `https://api.nasa.gov/planetary/apod?api_key=2JAcjwEBaCKS4enUmD0hveRXamLQCVauioOBJ6V2&date=${props.apiDate}`
       )
       .then(response => {
         console.log(response.data);
@@ -18,7 +18,7 @@ export default function PhotoGrid(props) {
       .catch(err =>
         console.log("The NASA API is currently down; please try again later.")
       );
-  }, []);
+  }, [props.apiDate]);
 
   return (
     <div className="photo-grid">

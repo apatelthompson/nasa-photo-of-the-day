@@ -1,9 +1,15 @@
-import React from "react";
+import React, { useState } from "react";
 import "./App.scss";
 import PhotoGrid from "./PhotoGrid";
 import { Header, Card } from "semantic-ui-react";
 
 function App(entry) {
+  const [apiDate, setApiDate] = useState("2019-07-18");
+
+  function handleDateChange(event) {
+    setApiDate(event.target.value);
+  }
+
   return (
     <div className="App">
       <Header as="h1" className="main">
@@ -14,12 +20,16 @@ function App(entry) {
         photo:
       </p>
 
-      <PhotoGrid className="photoGrid" />
+      <PhotoGrid
+        className="photoGrid"
+        apiDate={apiDate}
+        setApiDate={setApiDate}
+      />
 
       <Card className="dateCard" style={{ width: "250px", height: "150px" }}>
         Select another date:
         <div className="datePicker">
-          <input type="date" />
+          <input type="date" onChange={handleDateChange} />
         </div>
       </Card>
     </div>
