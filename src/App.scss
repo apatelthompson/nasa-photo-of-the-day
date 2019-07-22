@@ -1,0 +1,85 @@
+.ui.container.App {
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  margin: 40px 0;
+
+  .ui.header.main {
+    font-family: Lato;
+    font-size: 3rem;
+    color: rgb(14, 43, 53);
+    padding: 20px 0 0 0;
+  }
+
+  .intro {
+    margin: 10 0 20px 0;
+    font-family: Lato;
+    font-size: 1.3rem;
+    color: rgb(14, 43, 53);
+
+    padding-bottom: 30px;
+  }
+  .main-section {
+    border-top: 2px solid rgb(14, 43, 53);
+    padding-top: 40px;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+  }
+
+  .card {
+    width: 700px;
+    height: 850px;
+    margin: 0 20px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    align-content: space-around;
+    border-radius: 10px;
+    // border: 1px solid indigo;
+    -moz-box-shadow: 5px 5px 5px 2px #ccc;
+    -webkit-box-shadow: 5px 5px 5px 2px #ccc;
+    box-shadow: 5px 5px 5px 2px #ccc;
+    background-color: rgb(14, 43, 53);
+
+    .cardTitle {
+      margin-bottom: 30px;
+      // font-size: 1.5rem;
+      font-family: Lato;
+      color: white;
+    }
+
+    .date {
+      color: white;
+      font-family: Lato;
+      font-size: 1.5rem;
+    }
+
+    img {
+      border-radius: 10px;
+    }
+
+    iframe {
+      border-radius: 10px;
+    }
+
+    .explanation {
+      font-family: Lato;
+      font-size: 1.2rem;
+      width: 600px;
+      text-align: justify;
+      color: charcoal;
+      margin: 40px 0;
+      color: white;
+      line-height: 1.8rem;
+    }
+  }
+
+  .ui.header {
+    color: white;
+  }
+}
